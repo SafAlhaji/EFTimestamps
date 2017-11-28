@@ -16,6 +16,11 @@ namespace EFTimestamps.Extensions
             return obj;
         }
 
+        public static IQueryable<T> Deleted<T>(this DbSet<T> dbSet) where T : class, ISoftDeletable
+        {
+            return dbSet.Where(c => c.DeletedAt != null);
+        }
+
         public static IQueryable<T> Undeleted<T>(this DbSet<T> dbSet) where T : class, ISoftDeletable
         {
             return dbSet.Where(c => c.DeletedAt == null);

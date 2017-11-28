@@ -51,7 +51,7 @@
     <Compile Include="Extensions\ISoftDeletableExtensions.cs" />
     <Compile Include="Interfaces\ISoftDeletable.cs" />
     <Compile Include="Interfaces\ITimestamps.cs" />
-    <Compile Include="TimestampsContext.cs" />
+    <Compile Include="TimestampsDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
